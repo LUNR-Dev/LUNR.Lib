@@ -1,7 +1,7 @@
 local LUNR={}
 
 local ScreenGui = Instance.new("ScreenGui")
-ScreenGui = game:WaitForChild("CoreGui")
+
 local Main = Instance.new("Frame")
 local Header = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -221,7 +221,7 @@ end
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Parent = game:WaitForChild("CoreGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Main.Name = "Main"
