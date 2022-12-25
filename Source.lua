@@ -242,7 +242,7 @@ function LUNR:MakeDivider()
 	--Properties:
 
 	Divider.Name = "Divider"
-	Divider.Parent = game.StarterGui.ScreenGui.Main.Content
+	Divider.Parent = Content
 	Divider.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 	Divider.Position = UDim2.new(0, 0, 0.524475515, 0)
 	Divider.Size = UDim2.new(0, 532, 0, 3)
@@ -251,10 +251,7 @@ function LUNR:MakeDivider()
 end
 
 function LUNR:MakeLabel(Text)
-	-- Gui to Lua
-	-- Version: 3.2
 
-	-- Instances:
 
 	local Label = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
@@ -263,7 +260,7 @@ function LUNR:MakeLabel(Text)
 	--Properties:
 
 	Label.Name = "Label"
-	Label.Parent = game.StarterGui.ScreenGui.Main.Content
+	Label.Parent = Content
 	Label.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 	Label.Position = UDim2.new(0, 0, 0.412587404, 0)
 	Label.Size = UDim2.new(0, 532, 0, 25)
@@ -285,7 +282,47 @@ function LUNR:MakeLabel(Text)
 	LabelText.TextWrapped = true
 end
 
+function LUNR:MakeButton(Text,callback)
+	local callback = callback or function() end
+	local Button = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local ButtonText = Instance.new("TextLabel")
+	local Action = Instance.new("TextButton")
 
+
+
+	Button.Name = "Button"
+	Button.Parent = Content
+	Button.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+	Button.Position = UDim2.new(0, 0, 0.559440553, 0)
+	Button.Size = UDim2.new(0, 532, 0, 37)
+
+	UICorner.Parent = Button
+
+	ButtonText.Name = "ButtonText"
+	ButtonText.Parent = Button
+	ButtonText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ButtonText.BackgroundTransparency = 1.000
+	ButtonText.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	ButtonText.Position = UDim2.new(0.0263157897, 0, 0.180353433, 0)
+	ButtonText.Size = UDim2.new(0, 185, 0, 22)
+	ButtonText.Font = Enum.Font.GothamBold
+	ButtonText.Text = Text
+	ButtonText.TextColor3 = Color3.fromRGB(255, 255, 255)
+	ButtonText.TextSize = 14.000
+	ButtonText.TextXAlignment = Enum.TextXAlignment.Left
+
+	Action.Name = "Action"
+	Action.Parent = Button
+	Action.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Action.BackgroundTransparency = 1.000
+	Action.Size = UDim2.new(1, 0, 1, 0)
+	Action.Font = Enum.Font.SourceSans
+	Action.Text = ""
+	Action.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Action.TextSize = 14.000
+	
+end
 
 --Properties:
 
