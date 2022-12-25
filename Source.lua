@@ -321,7 +321,10 @@ function LUNR:MakeButton(Text,callback)
 	Action.Text = ""
 	Action.TextColor3 = Color3.fromRGB(0, 0, 0)
 	Action.TextSize = 14.000
+	
+	Action.Mousebutton1Down:connect(function()
 	pcall(callback)
+			end
 	
 end
 
