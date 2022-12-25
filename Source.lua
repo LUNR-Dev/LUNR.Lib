@@ -12,7 +12,8 @@ local Content = Instance.new("ScrollingFrame")
 local UIPadding = Instance.new("UIPadding")
 local UIListLayout = Instance.new("UIListLayout")
 
-local ScriptName = Instance.new("TextLabel")
+function LUNR:MakeName(Text)
+	local ScriptName = Instance.new("TextLabel")
 
 
 ScriptName.Name = "ScriptName"
@@ -22,10 +23,13 @@ ScriptName.BackgroundTransparency = 1.000
 ScriptName.Position = UDim2.new(0.0263157897, 0, 0, 0)
 ScriptName.Size = UDim2.new(0, 199, 0, 29)
 ScriptName.Font = Enum.Font.GothamBold
-ScriptName.Text = _G.SetupName
+ScriptName.Text = Text
 ScriptName.TextColor3 = Color3.fromRGB(255, 255, 255)
 ScriptName.TextSize = 14.000
 ScriptName.TextXAlignment = Enum.TextXAlignment.Left
+	end
+
+
 
 function LUNR:MakeToggle(Text,callback)
 	local Toggle = Instance.new("Frame")
