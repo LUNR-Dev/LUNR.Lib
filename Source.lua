@@ -1,6 +1,7 @@
 local LUNR={}
 
 local ScreenGui = Instance.new("ScreenGui")
+ScreenGui = game:WaitForChild("CoreGui")
 local Main = Instance.new("Frame")
 local Header = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
