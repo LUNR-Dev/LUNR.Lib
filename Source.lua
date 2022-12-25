@@ -235,6 +235,57 @@ function LUNR:MakeSlider(Text,minvalue,maxvalue,callback)
 end
 
 
+function LUNR:MakeDivider()
+	local Divider = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+
+	--Properties:
+
+	Divider.Name = "Divider"
+	Divider.Parent = game.StarterGui.ScreenGui.Main.Content
+	Divider.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+	Divider.Position = UDim2.new(0, 0, 0.524475515, 0)
+	Divider.Size = UDim2.new(0, 532, 0, 3)
+
+	UICorner.Parent = Divider
+end
+
+function LUNR:MakeLabel(Text)
+	-- Gui to Lua
+	-- Version: 3.2
+
+	-- Instances:
+
+	local Label = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local LabelText = Instance.new("TextLabel")
+
+	--Properties:
+
+	Label.Name = "Label"
+	Label.Parent = game.StarterGui.ScreenGui.Main.Content
+	Label.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+	Label.Position = UDim2.new(0, 0, 0.412587404, 0)
+	Label.Size = UDim2.new(0, 532, 0, 25)
+
+	UICorner.Parent = Label
+
+	LabelText.Name = "Label Text"
+	LabelText.Parent = Label
+	LabelText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	LabelText.BackgroundTransparency = 1.000
+	LabelText.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	LabelText.Position = UDim2.new(0.0263157897, 0, 0.153846443, 0)
+	LabelText.Size = UDim2.new(0, 489, 0, 21)
+	LabelText.Font = Enum.Font.GothamBold
+	LabelText.Text = Text
+	LabelText.TextColor3 = Color3.fromRGB(255, 255, 255)
+	LabelText.TextScaled = true
+	LabelText.TextSize = 14.000
+	LabelText.TextWrapped = true
+end
+
+
 
 --Properties:
 
